@@ -13,6 +13,16 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <input type="submit" value="Login">
+        <button id="addParam">Add Parameter</button>
     </form>
 </body>
+<script>
+    const addParamButton = document.getElementById('addParam');
+    addParamButton.addEventListener('click', () => {
+        const currentURL = window.location.href;
+        const newURL = new URL(currentURL);
+        newURL.searchParams.set('poc', 'your_value_here'); // Replace 'your_value_here' with the value you want to add.
+        window.location.href = newURL.toString();
+    });
+</script>
 </html>
