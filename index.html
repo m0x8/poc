@@ -21,7 +21,7 @@
     addParamButton.addEventListener('click', () => {
         const currentURL = window.location.href;
         const newURL = new URL(currentURL);
-        newURL.searchParams.set('poc', 'your_value_here'); // Replace 'your_value_here' with the value you want to add.
+        newURL.searchParams.set('a', 'poc');
         window.location.href = newURL.toString();
     });
 </script>
